@@ -52,7 +52,7 @@ public class TestService {
 	//Save test information: candidate, answered and return test result
 	public List<TestResult> testProcessing(Answered answered) {
 		
-//		saveTest(answered);
+		saveTest(answered);
 		List<TestResult> testResults = new ArrayList<>();
 		
 		majorRepository.findAll().forEach(major -> {

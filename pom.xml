@@ -87,7 +87,7 @@
 					       <goal>npm</goal>
 					      </goals>
 					      <configuration>
-					       <arguments>webpack</arguments>
+					       <arguments>run build</arguments>
 					      </configuration>
 					     </execution>
                    </executions>

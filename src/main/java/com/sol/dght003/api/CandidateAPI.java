@@ -15,7 +15,7 @@ import com.sol.dght003.service.CandidateService;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("api")
+@RequestMapping("/api")
 public class CandidateAPI {
 	
 	@Autowired

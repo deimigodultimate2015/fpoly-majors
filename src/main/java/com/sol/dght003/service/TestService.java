@@ -94,7 +94,7 @@ public class TestService {
 				answered.getCandidate().getSchool(),
 				answered.getCandidate().getProvince()
 			);
-		
+		candidateRepository.save(candidate);
 		Result result = resultRepository.save(new Result(new Date(), candidate));
 		answered.getArrInt().forEach(answeredId -> {
 			ResultDetail resultDetail = new ResultDetail();

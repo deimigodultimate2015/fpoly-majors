@@ -19,4 +19,14 @@ public class RedirectAPI {
 	public void redirect2(HttpServletResponse response) throws Exception {
 		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
+	
+	@RequestMapping("/learn/**")
+	public void redirect3(HttpServletResponse response) throws Exception {
+		response.sendRedirect("http://fpolymajors.herokuapp.com/");
+	}
+	
+	@RequestMapping("/view/**")
+	public void redirect4(HttpServletResponse response) throws Exception {
+		response.sendRedirect("http://fpolymajors.herokuapp.com/");
+	}
 }

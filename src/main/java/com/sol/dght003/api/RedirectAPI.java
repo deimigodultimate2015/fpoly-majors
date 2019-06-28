@@ -32,7 +32,7 @@ public class RedirectAPI {
 		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
-	@RequestMapping(value ="/",produces = "application/json")
+	@RequestMapping(value ="/**",produces = "application/json")
 	public void getURLValue(HttpServletRequest request, HttpServletResponse response){
 	    String url = request.getRequestURI();
 	    Cookie cookie = new Cookie("url", url);

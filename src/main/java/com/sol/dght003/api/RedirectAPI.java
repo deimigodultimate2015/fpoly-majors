@@ -1,5 +1,7 @@
 package com.sol.dght003.api;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -28,5 +30,12 @@ public class RedirectAPI {
 	@RequestMapping("/view/**")
 	public void redirect4(HttpServletResponse response) throws Exception {
 		response.sendRedirect("http://fpolymajors.herokuapp.com/");
+	}
+	
+	@RequestMapping(value ="/",produces = "application/json")
+	public void getURLValue(HttpServletRequest request, HttpServletResponse response){
+	    String url = request.getRequestURI();
+	    Cookie cookie = new Cookie("url", url);
+	    response.addCookie(cookie);
 	}
 }

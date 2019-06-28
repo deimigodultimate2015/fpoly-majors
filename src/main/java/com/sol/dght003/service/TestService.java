@@ -57,7 +57,7 @@ public class TestService {
 		Candidate candidate = new Candidate();
 		candidate = candidateRepository
 				.save(new Candidate(answered.getCandidate().getName(), answered.getCandidate().getPhone(),
-						answered.getCandidate().getSchool(), answered.getCandidate().getProvince()));
+						answered.getCandidate().getSchool(), answered.getCandidate().getAddress()));
 		
 		
 		System.out.println("This is the id: " + candidate.getId());
@@ -107,7 +107,7 @@ public class TestService {
 	public Result saveTest(Answered answered) {
 
 		Candidate candidate = new Candidate(answered.getCandidate().getName(), answered.getCandidate().getPhone(),
-				answered.getCandidate().getSchool(), answered.getCandidate().getProvince());
+				answered.getCandidate().getSchool(), answered.getCandidate().getAddress());
 		candidateRepository.save(candidate);
 		Result result = resultRepository.save(new Result(new Date(), candidate));
 		answered.getArrInt().forEach(answeredId -> {

@@ -53,20 +53,18 @@ public class TestService {
 	public List<TestResult> testProcessing(Answered answered) {
 		
 //		saveTest(answered);
-		
-		Candidate candidate = new Candidate(
-				answered.getCandidate().getName(),
+
+		Candidate candidate = new Candidate();
+		candidate = candidateRepository.save(new Candidate(answered.getCandidate().getName(),
 				answered.getCandidate().getPhone(),
 				answered.getCandidate().getSchool(),
-				answered.getCandidate().getProvince()
-			);
-		candidateRepository.save(candidate);
+				answered.getCandidate().getProvince()));
+		System.out.println("This is the id: "+candidate.getId());
 		Result result = resultRepository.save(new Result(new Date(), candidate));
 		answered.getArrInt().forEach(answeredId -> {
 			ResultDetail resultDetail = new ResultDetail();
 			resultDetail.setResult(result);
 			resultDetail.setAnswer(new Answer(answeredId));
-			result.getResultDetails().add(resultDetail);
 			resultDetailRepository.save(resultDetail);
 		});
 		

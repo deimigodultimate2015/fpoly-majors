@@ -13,22 +13,30 @@ import org.springframework.web.bind.annotation.RestController;
 public class RedirectAPI {
 
 	@RequestMapping("/test/**")
-	public void redirect1(HttpServletResponse response) throws Exception {
+	public void redirect1(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		Cookie cookie = new Cookie("url", request.getRequestURL().toString() + "?" + request.getQueryString());
+		response.addCookie(cookie);
 		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
 	@RequestMapping("/share/**")
-	public void redirect2(HttpServletResponse response) throws Exception {
+	public void redirect2(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		Cookie cookie = new Cookie("url", request.getRequestURL().toString() + "?" + request.getQueryString());
+		response.addCookie(cookie);
 		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
 	@RequestMapping("/learn/**")
-	public void redirect3(HttpServletResponse response) throws Exception {
+	public void redirect3(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		Cookie cookie = new Cookie("url", request.getRequestURL().toString() + "?" + request.getQueryString());
+		response.addCookie(cookie);
 		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
 	@RequestMapping("/view/**")
-	public void redirect4(HttpServletResponse response) throws Exception {
+	public void redirect4(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		Cookie cookie = new Cookie("url", request.getRequestURL().toString() + "?" + request.getQueryString());
+		response.addCookie(cookie);
 		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	

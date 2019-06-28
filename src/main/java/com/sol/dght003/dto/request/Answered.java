@@ -12,12 +12,12 @@ public class Answered {
 	
 	public Answered () {}
 
-	public CandidateRegister getCandinate() {
+	public CandidateRegister getCandidate() {
 		return candinate;
 	}
 
-	public void setCandinate(CandidateRegister candinate) {
-		this.candinate = candinate;
+	public void setCandidate(CandidateRegister candidate) {
+		this.candinate = candidate;
 	}
 
 	public Map<Integer, Integer> getAnswers() {

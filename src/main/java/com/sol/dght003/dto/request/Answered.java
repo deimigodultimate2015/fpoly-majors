@@ -6,18 +6,18 @@ import java.util.Map;
 
 public class Answered {
 	
-	private CandidateRegister candidate;
+	private CandidateRegister candinate;
 	
 	private Map<Integer, Integer> answers = new HashMap<Integer, Integer>();
 	
 	public Answered () {}
 
 	public CandidateRegister getCandidate() {
-		return candidate;
+		return candinate;
 	}
 
 	public void setCandidate(CandidateRegister candidate) {
-		this.candidate = candidate;
+		this.candinate = candidate;
 	}
 
 	public Map<Integer, Integer> getAnswers() {

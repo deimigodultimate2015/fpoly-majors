@@ -1,5 +1,7 @@
 package com.sol.dght003.api;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class RedirectAPI {
 
 	@RequestMapping("/test/**")
-	public String redirect1() {
-		return "forward:/";
+	public void redirect1(HttpServletResponse response) throws Exception {
+		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
 	@RequestMapping("/share/**")
-	public String redirect2() {
-		return "forward:/";
+	public void redirect2(HttpServletResponse response) throws Exception {
+		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 }

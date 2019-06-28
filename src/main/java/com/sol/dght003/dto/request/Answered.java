@@ -16,8 +16,8 @@ public class Answered {
 		return candinate;
 	}
 
-	public void setCandinate(CandidateRegister candidate) {
-		this.candinate = candidate;
+	public void setCandinate(CandidateRegister candinate) {
+		this.candinate = candinate;
 	}
 
 	public Map<Integer, Integer> getAnswers() {

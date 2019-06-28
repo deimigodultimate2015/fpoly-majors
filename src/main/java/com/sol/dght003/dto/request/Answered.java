@@ -12,11 +12,11 @@ public class Answered {
 	
 	public Answered () {}
 
-	public CandidateRegister getCandidate() {
+	public CandidateRegister getCandinate() {
 		return candinate;
 	}
 
-	public void setCandidate(CandidateRegister candidate) {
+	public void setCandinate(CandidateRegister candidate) {
 		this.candinate = candidate;
 	}
 

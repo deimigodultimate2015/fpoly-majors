@@ -16,28 +16,28 @@ public class RedirectAPI {
 	public void redirect1(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		Cookie cookie = new Cookie("url", request.getRequestURL().toString() + "?" + request.getQueryString());
 		response.addCookie(cookie);
-//		response.sendRedirect("http://fpolymajors.herokuapp.com/");
+		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
 	@RequestMapping("/share/**")
 	public void redirect2(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		Cookie cookie = new Cookie("url", request.getRequestURL().toString() + "?" + request.getQueryString());
 		response.addCookie(cookie);
-//		response.sendRedirect("http://fpolymajors.herokuapp.com/");
+		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
 	@RequestMapping("/learn/**")
 	public void redirect3(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		Cookie cookie = new Cookie("url", request.getRequestURL().toString() + "?" + request.getQueryString());
 		response.addCookie(cookie);
-//		response.sendRedirect("http://fpolymajors.herokuapp.com/");
+		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
 	@RequestMapping("/view/**")
 	public void redirect4(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		Cookie cookie = new Cookie("url", request.getRequestURL().toString() + "?" + request.getQueryString());
 		response.addCookie(cookie);
-//		response.sendRedirect("http://fpolymajors.herokuapp.com/");
+		response.sendRedirect("http://fpolymajors.herokuapp.com/");
 	}
 	
 //	@RequestMapping(value ="/**",produces = "application/json")

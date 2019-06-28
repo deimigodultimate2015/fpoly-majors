@@ -5,16 +5,16 @@ public class CandidateRegister {
 
 	private String name;
 	private String phone;
-	private String province;
+	private String address;
 	private String school;
 	
 	public CandidateRegister() {}
 	
-	public CandidateRegister(String name, String phone, String province, String school) {
+	public CandidateRegister(String name, String phone, String address, String school) {
 		super();
 		this.name = name;
 		this.phone = phone;
-		this.province = province;
+		this.address = address;
 		this.school = school;
 	}
 
@@ -30,11 +30,11 @@ public class CandidateRegister {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getProvince() {
-		return province;
+	public String getAddress() {
+		return address;
 	}
-	public void setProvince(String province) {
-		this.province = province;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public String getSchool() {
 		return school;
